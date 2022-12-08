@@ -21,7 +21,7 @@ public class ExaminationServiceImpl implements ExaminationService {
             Map.Entry<Abiturient, Integer> entry = iterator.next();
             finalList.add(entry.getKey());
         }
-        return null;
+        return finalList;
     }
 
     @Override

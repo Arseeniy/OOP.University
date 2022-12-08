@@ -16,10 +16,10 @@ public class DemoServiceImpl implements DemoService {
         Abiturient abiturient3 = new Abiturient("Natalia", new AbiturientMarks(new int[]{4, 3, 2, 4, 3}));
         Abiturient abiturient4 = new Abiturient("Dmitriy", new AbiturientMarks(new int[]{5, 5, 5, 4, 3}));
         Abiturient abiturient5 = new Abiturient("Aleksandra", new AbiturientMarks(new int[]{2, 3, 5, 4, 2}));
-        System.out.println(Abiturient.getAbiturientsList());
         List<Abiturient> toConsole = examinationService.getListEnrolledAbiturients(Abiturient.getAbiturientsList());
         for (Abiturient abiturient : toConsole) {
-            System.out.println(abiturient.getName() + examinationService.getAverageStudentMark(abiturient.getAbiturientMarks().getAbiturientMarksArray()));
+            System.out.println(abiturient.getName() + ". Average mark is: "
+                    + examinationService.getAverageStudentMark(abiturient.getAbiturientMarks().getAbiturientMarksArray()));
         }
     }
 }
